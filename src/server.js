@@ -8,6 +8,13 @@ app.set("view engine", "ejs");
 
 const port = 3000;
 
-app.get("/", (req, res) => res.render("index", { text: "hi" }));
+app.get("/", (req, res) => {
+    const articles = [{
+        title: "Artigo teste",
+        createdAt: Date.now(),
+        description: "Descrição teste "
+    }]
+    res.render("index", { articles: articles })
+});
 
 app.listen(port, () => console.log(`O app está rodando na porta ${port}`));
