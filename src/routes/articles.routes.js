@@ -2,4 +2,10 @@ import { Router } from "express";
 
 export const articlesRoutes = Router();
 
-articlesRoutes.get("/", (req, res) => res.send("Funcionou!"))
+articlesRoutes.get("/new", (req, res) => {
+    res.render("articles/new");
+});
+
+articlesRoutes.post("/", (req, res) => {
+
+});

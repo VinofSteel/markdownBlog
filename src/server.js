@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
         createdAt: new Date,
         description: "Descrição teste "
     }];
-    res.render("index", { articles: articles });
+    res.render("articles/index", { articles: articles });
 });
 
 app.listen(port, () => console.log(`O app está rodando na porta ${port}`));
