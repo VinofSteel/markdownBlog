@@ -1,12 +1,18 @@
 import express from "express";
 import { articlesRoutes } from "./routes";
-
-const app = express();
-app.use(express.json());
-app.use("/articles", articlesRoutes);
-app.set("view engine", "ejs");
+const mongoose = require("mongoose");
 
 const port = 3000;
+const app = express();
+app.use(express.urlencoded({ extended: false}));
+
+mongoose.set('strictQuery', false);
+mongoose.connect("mongodb://localhost/blog")
+
+app.set("view engine", "ejs");
+
+app.use("/articles", articlesRoutes);
+
 
 app.get("/", (req, res) => {
     const articles = [{
