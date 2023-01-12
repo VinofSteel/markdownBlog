@@ -1,0 +1,20 @@
+{
+  "name": "markdown_blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": "git@github.com:VinofSteel/markdownBlog.git",
+  "author": "Vinicius <v.nascimento23@yahoo.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sucrase": "^3.29.0"
+  }
+}
